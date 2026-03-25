@@ -1,0 +1,18 @@
+image:
+  repository: hugo-site
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: true
+  className: traefik
+  hosts:
+    - host: hugo.localhost
+      paths:
+        - path: /
+          pathType: Prefix
+
+serviceMonitor:
+  enabled: false
+  labels:
+    release: kube-prom-stack

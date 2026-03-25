@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM klakegg/hugo:0.111.3-ext-alpine AS builder
+FROM klakegg/hugo:0.125.7-ext-alpine AS builder
 WORKDIR /src
 COPY site/ /src/
 RUN hugo --minify

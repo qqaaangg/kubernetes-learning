@@ -1,0 +1,49 @@
+grafana:
+  adminUser: admin
+  adminPassword: admin123456
+  defaultDashboardsTimezone: browser
+  persistence:
+    enabled: false
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    hosts:
+      - grafana.localhost
+    path: /
+    pathType: Prefix
+
+prometheus:
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    hosts:
+      - prometheus.localhost
+    paths:
+      - /
+  prometheusSpec:
+    retention: 3d
+    serviceMonitorSelectorNilUsesHelmValues: false
+    serviceMonitorNamespaceSelector: {}
+    podMonitorSelectorNilUsesHelmValues: false
+    podMonitorNamespaceSelector: {}
+    ruleSelectorNilUsesHelmValues: false
+    scrapeInterval: 30s
+    evaluationInterval: 30s
+    storageSpec: {}
+
+alertmanager:
+  enabled: true
+  alertmanagerSpec:
+    storage: {}
+
+kubeEtcd:
+  enabled: false
+
+kubeControllerManager:
+  enabled: false
+
+kubeScheduler:
+  enabled: false
+
+kubeProxy:
+  enabled: true

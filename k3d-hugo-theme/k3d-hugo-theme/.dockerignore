@@ -1,0 +1,7 @@
+site/public
+site/resources
+.git
+.gitignore
+README.md
+chart
+scripts

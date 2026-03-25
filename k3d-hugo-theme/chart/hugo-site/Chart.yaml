@@ -1,0 +1,6 @@
+apiVersion: v2
+name: hugo-site
+description: Hugo static site deployed with nginx + prometheus exporter
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

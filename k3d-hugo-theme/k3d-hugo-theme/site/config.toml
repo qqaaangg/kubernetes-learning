@@ -1,0 +1,7 @@
+baseURL = 'http://hugo.localhost/'
+languageCode = 'en-us'
+title = 'My Hugo Site'
+theme = 'replace-with-your-theme-name'
+
+[params]
+  description = 'Replace this skeleton with your actual Hugo site/theme'
